@@ -1,0 +1,278 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-size: var(--white-color);
+    box-sizing: border-box;
+    font-family: 'Quicksand',sans-serif;
+}
+
+:root {
+    --sidebar_bg: #1F2D43;
+    --body-bg: #172032;
+    --base-elements: #0069FF;
+    --base-text-primary: #ffffff;
+    --base-text-secondary: #1F2D43;
+    --base-surface: #1F2D43;
+    --primary-solid: #0069FF;
+    --primary-gradient: linear-gradient(180deg, #2550E5 30.88%, #0069FF 98.99%);
+    --base-text-placeholder: #AFB3C9;
+    --base-divider: #6070AB;
+    --dropdown-box-shadow: 0 0.275rem 1.25rem rgba(10, 11, 12, 0.05), 0 0.25rem 0.5625rem rgba(10, 11, 12, 0.03)
+}
+
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    background: var(--primary-gradient);
+    z-index: 10;
+}
+
+.container{
+    padding: 0 100px;
+    height: 100%;
+}
+
+header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+}
+
+header .menu_list{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+header .menu_list li {
+    list-style-type: none;
+    color: var(--base-text-primary);
+    font-size: .875rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+header .menu_list li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--base-text-primary);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+header .menu_list li:hover:after{
+    width: 100%;
+}
+
+header .menu_list li img {
+    width: 15px;
+    transform: translateY(1px);
+}
+
+header .menu_list li a{
+    color: var(--base-text-primary);
+    font-size: .875rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.btn{
+    color: var(--base-text-primary);
+    background-color: var(--base-elements);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+header .sub_menu{
+    background-color: var(--base-text-primary);
+    position: absolute;
+    top: 80%;
+    left: 240px;
+    padding: 20px;
+    max-height: 200px;
+    width: 600px;
+    gap: 20px;
+    border-radius: 5px;
+    box-shadow: var(--dropdown-box-shadow);
+    display: none;
+    transition: height 0.9s ease;
+}
+
+header .sub_menu._active{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+header .sub_menu li a{
+    color: var(--base-text-secondary);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+header .sub_menu li span {
+    background-color: #f6f7f8;
+    width: 2rem;
+    height: 2rem; 
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_banner{
+    width: 100%;
+    margin-top: 70px;
+    height: 500px;
+    background-color: rgba(245, 245, 245, 0.5); 
+    position: relative;
+}
+
+.main_banner .elipse{
+    position: absolute;
+}
+
+.main_banner .elipse.right{
+    right: 20%;
+}
+
+.main_banner .elipse.left{
+    top: -30%;
+    left: 10%;
+}
+
+.main_banner .wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.main_banner .main_banner-descr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100%;
+}
+
+.main_banner .main_banner-descr .title{
+    font-size: 5rem;
+}
+
+.main_banner .main_banner-descr ul li {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+.main_banner .main_banner-descr ul li::before{
+    content: '\2013'; 
+    margin-right: 15px; 
+}
+
+.main_banner .main_banner-descr .btn{
+    padding: 15px 50px;
+}
+
+
+.main_banner .main_banner-img{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    z-index: 1;
+}
+
+.breadscrump{
+    margin-top: 50px;
+    color: var(--base-text-secondary);
+    font-size: 1.125rem;
+}
+
+.how_to .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.how_to-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.how_to-content .title{
+    font-size: 3rem;
+}
+
+.how_to-content ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 450px;
+}
+
+.how_to-content ul li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+}
+
+
+.how_to-content ul li .numeric{
+    font-size: 3rem;
+    color: var(--base-elements);
+    position: relative;
+}
+
+.how_to-content ul li .numeric:after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 30%;
+    background-color:  var(--base-elements);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.how_to img{
+    width: 40%;
+}
