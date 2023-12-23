@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 fadeOut(targetImage);
                 targetImage.classList.remove('_active');
             }
-
-            // Закрытие других details при открытии текущего
             detailsElements.forEach((otherDetails, otherIndex) => {
                 if (otherIndex !== index && isVisible) {
                     otherDetails.removeAttribute('open');
@@ -98,5 +96,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         animate();
+    }
+
+    // core module page
+
+    let itemTitles = document.querySelectorAll('.item_title');
+
+    window.addEventListener('scroll', function () {
+        itemTitles.forEach(function (itemTitle) {
+            if (isElementInViewport(itemTitle) && !itemTitle.classList.contains('visible')) {
+                itemTitle.classList.add('visible');
+            }
+        });
+    });
+
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
     }
 });
