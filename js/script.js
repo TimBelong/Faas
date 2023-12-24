@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 requestAnimationFrame(animate);
             }
         }
-
         animate();
     }
 
@@ -119,4 +118,70 @@ document.addEventListener('DOMContentLoaded', function () {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
+
+    var moduleItems = document.querySelectorAll(".module_item");
+
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScroll() {
+        moduleItems.forEach(function (item) {
+            if (isInViewport(item)) {
+                // Добавляем класс in-view
+                item.classList.add("in-view");
+
+                // Определяем, с какой стороны элемент виден и добавляем соответствующий класс
+                var textElement = item.querySelector(".item_text");
+                var imagesElement = item.querySelector(".item_images");
+
+                if (textElement && isInViewport(textElement)) {
+                    textElement.classList.add("left-animation");
+                }
+
+                if (imagesElement && isInViewport(imagesElement)) {
+                    imagesElement.classList.add("right-animation");
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    var coplianceItem = document.querySelectorAll('.compliance_list .item_title');
+
+    // Перебираем элементы и добавляем обработчик события для каждого
+    coplianceItem.forEach(function (itemTitle) {
+      itemTitle.addEventListener('click', function () {
+        // Убираем класс _active у всех элементов с классом item_title
+        coplianceItem.forEach(function (title) {
+          title.classList.remove('_active');
+        });
+
+        // Добавляем класс _active только к нажатому элементу
+        itemTitle.classList.add('_active');
+
+        // Получаем индекс текущего элемента
+        var index = Array.from(coplianceItem).indexOf(itemTitle);
+
+        // Получаем все элементы с классом compliance_item
+        var complianceItems = document.querySelectorAll('.compliance_item');
+
+        // Убираем класс _active у всех элементов с классом compliance_item
+        complianceItems.forEach(function (complianceItem) {
+          complianceItem.classList.remove('_active');
+        });
+
+        // Добавляем класс _active только к соответствующему элементу с классом compliance_item
+        complianceItems[index].classList.add('_active');
+      });
+    });
 });

@@ -215,7 +215,7 @@ header .sub_menu li span {
 
 .main_banner .main_banner-descr ul li {
     list-style-type: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .main_banner .main_banner-descr ul li::before {
@@ -527,7 +527,7 @@ header .sub_menu li span {
     display: block;
     transform: scale(1);
 }
-.shape{
+.module_section .shape{
     width: 45%;
 }
 
@@ -699,6 +699,304 @@ header .sub_menu li span {
 
 .transfers__module .btn{
     padding: 15px 50px;
+}
+
+
+.crypto_module .title, .remittance-module .title{
+    margin-top: 40px;
+    font-size: 3rem;
+}
+
+
+.crypto_module .wrapper, .remittance-module .wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top:40px;
+}
+
+.crypto_module .wrapper ul, .remittance-module ul{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.crypto_module .module_item, .remittance-module .module_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crypto_module .module_item.reverse, .remittance-module .module_item.reverse {
+    flex-direction: row-reverse;
+}
+
+.crypto_module .module_item .item_text, .remittance-module .module_item .item_text{
+    width: 45%;    
+}
+
+.crypto_module .module_item .item_text .item_title, .remittance-module .module_item .item_text .item_title{
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.crypto_module .module_item .item_text .item_descr, .remittance-module .module_item .item_text .item_descr{
+    color: var(--base-text-placeholder);
+    margin-bottom: 50px;
+    width: 60%;
+}
+
+
+.crypto_module .module_item .item_text .btn.uncolored, .remittance-module .module_item .item_text .btn.uncolored{
+    color: var(--primary-solid);
+    background-color: var(--base-text-primary);
+    border: 1px solid var(--primary-solid);
+    margin-right: 20px;
+}
+
+.crypto_module .module_item .item_images, .remittance-module .module_item .item_images{
+    position: relative;
+    width: 45%;
+}
+
+
+.crypto_module .module_item.crypto_acc .item_images img:nth-child(1){
+    position: absolute;
+    top: -10%;
+    left:-10%;
+    z-index: 1;
+}
+
+.crypto_module .module_item.crypto_acc .item_images img:nth-child(2){
+    position: absolute;
+    top: 8%;
+    left:-2%;
+    z-index: 2;
+}
+
+.crypto_module .module_item.crypto_acc .item_images img:nth-child(3){
+    position: absolute;
+    bottom: 0%;
+    right:-5%;
+    z-index: 3;
+}
+
+.crypto_module .module_item.reverse .item_text{
+    transform: translateX(100px);
+}
+
+
+.crypto_module .module_item.crypto_exch .item_images img:nth-child(1){
+    position: absolute;
+    top: 0%;
+    left:-5%;
+    z-index: 1;
+}
+
+.crypto_module .module_item.crypto_exch .item_images img:nth-child(2){
+    position: absolute;
+    top: 0%;
+    right:15%;
+    z-index: 3;
+}
+
+.crypto_module .module_item.crypto_exch .item_images img:nth-child(3){
+    position: absolute;
+    bottom: 0%;
+    left:0%;
+    z-index: 2;
+}
+
+
+.crypto_module .module_item.crypto_dep .item_images img:nth-child(1){
+    position: absolute;
+    top: 10%;
+    left:5%;
+    z-index: 2;
+}
+
+.crypto_module .module_item.crypto_dep .item_images img:nth-child(2){
+    position: absolute;
+    top: 15%;
+    right:10%;
+    z-index: 3;
+}
+
+.crypto_module .module_item.crypto_dep .item_images img:nth-child(3){
+    position: absolute;
+    top: 43%;
+    left:0%;
+    z-index: 1;
+}
+
+.crypto_module .module_item.crypto_dep .item_images img:nth-child(4){
+    position: absolute;
+    top: 50%;
+    right:10%;
+    z-index: 2;
+}
+
+.crypto_module .module_item.crypto_aml .item_images img:nth-child(1){
+    position: absolute;
+    top: 15%;
+    left:0%;
+    z-index: 2;
+}
+
+.crypto_module .module_item.crypto_aml .item_images img:nth-child(2){
+    position: absolute;
+    top: 42%;
+    right:40%;
+    z-index: 3;
+}
+
+
+.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(1){
+    position: absolute;
+    top: -10%;
+    right:0%;
+    z-index: 2;
+}
+
+.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(2){
+    position: absolute;
+    top: 28%;
+    left:0%;
+    z-index: 1;
+}
+
+.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(3){
+    position: absolute;
+    bottom:10%;
+    right:10%;
+    z-index: 2;
+}
+
+
+.module_item .item_text,
+.module_item .item_images,
+.module_item.reverse .item_text,
+.module_item.reverse .item_images {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.module_item.in-view .item_text,
+.module_item.in-view .item_images {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.module_item.reverse.in-view .item_text,
+.module_item.reverse.in-view .item_images {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.module_item .item_text,
+.module_item .item_images {
+    transform: translateX(-50%);
+}
+
+
+.module_item.reverse .item_text,
+.module_item.reverse .item_images {
+    transform: translateX(50%);
+}
+
+
+.remittance-module .module_item .item_images img:first-child{
+     position: absolute;
+    bottom:20%;
+    right:20%;
+    z-index: 2;
+    max-width: 630px;
+}
+
+.remittance-module .module_item .item_images img.fx-rate{
+    bottom:0%;
+    right:20%;
+    max-width: 530px;
+}
+
+
+.compliance-module .title{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+.compliance-module .wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.compliance-module .compliance_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.compliance-module .compliance_list li{
+    padding: 10px 40px;
+    color: var(--base-text-placeholder);
+    border: 1px solid var(--base-text-placeholder);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.compliance-module .compliance_list li._active{
+    color: var(--base-elements);
+    border: 1px solid var(--base-elements);
+}
+
+
+
+.compliance_descr .compliance_item{
+    display: none;
+}
+
+.compliance_descr .compliance_item._active{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.compliance_descr .compliance_item .item_text{
+    width: 45%;    
+}
+
+.compliance_descr .compliance_item .item_text .item_title{
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.compliance_descr .compliance_item .item_text .item_descr{
+    color: var(--base-text-placeholder);
+    margin-bottom: 50px;
+    width: 60%;
+}
+
+
+.compliance_descr .compliance_item .item_text .btn.uncolored{
+    color: var(--primary-solid);
+    background-color: var(--base-text-primary);
+    border: 1px solid var(--primary-solid);
+    margin-right: 20px;
+}
+
+.compliance_descr .compliance_item .item_images{
+    position: relative;
+}
+
+.compliance_descr .compliance_item .item_images img:first-child{
+    position: absolute;
+    top: 10%;
+   left:0%;
+   z-index: 2;
+   max-width: 730px;
 }
 
 footer{
