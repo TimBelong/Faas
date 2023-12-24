@@ -122,17 +122,17 @@ header .menu_list li a {
     font-weight: 600;
 }
 
-.btn:hover{
-    color:var(--base-elements);
+.btn:hover {
+    color: var(--base-elements);
     background-color: var(--base-text-primary);
-    border:1px solid var(--base-elements)
+    border: 1px solid var(--base-elements)
 }
 
 header .sub_menu {
     background-color: var(--base-text-primary);
     position: absolute;
     top: 180%;
-    left:100%;
+    left: 100%;
     padding: 20px;
     max-height: 200px;
     width: 600px;
@@ -349,7 +349,7 @@ header .sub_menu li span {
     padding: 15px 50px;
 }
 
-.appointment_descr .btn:hover{
+.appointment_descr .btn:hover {
     color: var(--base-text-primary);
     background-color: var(--base-elements);
 }
@@ -416,20 +416,20 @@ header .sub_menu li span {
     width: 100%;
 }
 
-.module_section .title{
+.module_section .title {
     color: var(--base-text-secondary);
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.module_section .wrapper{
+.module_section .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
 }
 
-.module_section .module_descr{
+.module_section .module_descr {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -442,18 +442,22 @@ header .sub_menu li span {
     box-sizing: border-box;
     border-top: 1px solid var(--base-divider);
     border-radius: var(--border-radius);
-    overflow: hidden; /* Добавлено для использования max-height */
-    max-height: 0; /* Скрыто по умолчанию */
+    overflow: hidden;
+    /* Добавлено для использования max-height */
+    max-height: 0;
+    /* Скрыто по умолчанию */
     padding: 0 20px;
     position: relative;
     line-height: 142%;
     color: #000;
     font-size: 1rem;
-    transition: max-height 0.8s ease-out; /* Анимация открытия */
+    transition: max-height 0.8s ease-out;
+    /* Анимация открытия */
 }
 
 .module_section .details[open] {
-    max-height: 1000px; /* Высота, которую вы считаете достаточной */
+    max-height: 1000px;
+    /* Высота, которую вы считаете достаточной */
 }
 
 .module_section summary {
@@ -482,9 +486,11 @@ header .sub_menu li span {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 17px; /* Уменьшенная ширина */
+    width: 17px;
+    /* Уменьшенная ширина */
     height: 1.7px;
-    background-color:#5741D9; /* Цвет плюса */
+    background-color: #5741D9;
+    /* Цвет плюса */
     transition: transform 0.3s;
 }
 
@@ -494,78 +500,86 @@ header .sub_menu li span {
     top: 50%;
     left: 0;
     transform: translateY(-50%) rotate(90deg);
-    width: 17px; /* Уменьшенная ширина */
+    width: 17px;
+    /* Уменьшенная ширина */
     height: 1.7px;
-    background-color: #5741D9; /* Цвет плюса */
+    background-color: #5741D9;
+    /* Цвет плюса */
 }
 
 .module_section details[open] summary::after {
     transform: translateY(-50%) rotate(0deg);
 }
 
-.module_section .btn{
+.module_section .btn {
     padding: 15px 50px;
 }
 
-.module_img{
+.module_img {
     width: 35%;
     position: absolute;
     left: 60%;
     top: 0px;
 }
 
-.module_img img{
-    width: 90%; /* ваше значение для ширины */
-    height: 50%; /* ваше значение для ширины */
+.module_img img {
+    width: 90%;
+    /* ваше значение для ширины */
+    height: 50%;
+    /* ваше значение для ширины */
     display: none;
     transform: scale(0);
     z-index: 5;
 
 }
 
-.module_img img._active{
+.module_img img._active {
     display: block;
     transform: scale(1);
 }
-.module_section .shape{
+
+.module_section .shape {
     width: 45%;
 }
 
 
-.money_provider_section .wrapper{
+.money_provider_section .wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.money_provider_section .title{
+.money_provider_section .title {
     display: flex;
     align-items: center;
     width: 30%;
 }
-.money_provider_section .title h2{
+
+.money_provider_section .title h2 {
     font-size: 3rem;
 }
 
-.money_provider_section .provider_img{
-    display:flex;
+.money_provider_section .provider_img {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     width: 50%;
 }
-.money_provider_section .provider_img-item{
+
+.money_provider_section .provider_img-item {
     max-width: 180px;
 }
-.money_provider_section .provider_img-item img{
+
+.money_provider_section .provider_img-item img {
     width: 100%;
 }
 
-.core__module .title{
+.core__module .title {
     font-size: 3rem;
     margin: 40px 0;
 }
 
-.core__module .wrapper{
+.core__module .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -579,7 +593,7 @@ header .sub_menu li span {
     gap: 40px;
 }
 
-.core__module .item_title{
+.core__module .item_title {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -604,26 +618,26 @@ header .sub_menu li span {
     justify-content: center;
 }
 
-.core__module .item_title img{
+.core__module .item_title img {
     width: 40px;
 }
 
-.core__module .item_title .item_title{
+.core__module .item_title .item_title {
     display: inline-block;
     width: 70%;
     font-size: 2rem;
 }
 
-.core__module .item_title .item_descr{
+.core__module .item_title .item_descr {
     color: var(--base-text-placeholder);
     width: 70%;
 }
 
-.main_banner-img img.payments{
+.main_banner-img img.payments {
     max-width: 500px;
 }
 
-.transfers__module .title{
+.transfers__module .title {
     margin-top: 40px;
     font-size: 3rem;
     position: relative;
@@ -631,7 +645,7 @@ header .sub_menu li span {
     padding-bottom: 10px;
 }
 
-.transfers__module .title::after{
+.transfers__module .title::after {
     content: "";
     display: block;
     height: 5px;
@@ -640,16 +654,16 @@ header .sub_menu li span {
     position: absolute;
     bottom: -5px;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
     transition: width 0.3s;
     border-radius: 15px;
 }
 
-.transfers__module .subtitle{
+.transfers__module .subtitle {
     text-align: center;
 }
 
-.transfers__module .wrapper{
+.transfers__module .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -663,7 +677,7 @@ header .sub_menu li span {
     gap: 40px;
 }
 
-.transfers__module .item_title{
+.transfers__module .item_title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -679,7 +693,7 @@ header .sub_menu li span {
     width: 35px;
 }
 
-.transfers__module .item_title .item_title{
+.transfers__module .item_title .item_title {
     width: 100%;
 }
 
@@ -693,182 +707,192 @@ header .sub_menu li span {
     color: var(--base-text-primary)
 }
 
-.transfers__module .item_title.colored .item_descr{
-    color: var(--base-text-primary) 
+.transfers__module .item_title.colored .item_descr {
+    color: var(--base-text-primary)
 }
 
-.transfers__module .btn{
+.transfers__module .btn {
     padding: 15px 50px;
 }
 
 
-.crypto_module .title, .remittance-module .title{
+.crypto_module .title,
+.remittance-module .title {
     margin-top: 40px;
     font-size: 3rem;
 }
 
 
-.crypto_module .wrapper, .remittance-module .wrapper{
+.crypto_module .wrapper,
+.remittance-module .wrapper {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-top:40px;
+    margin-top: 40px;
 }
 
-.crypto_module .wrapper ul, .remittance-module ul{
+.crypto_module .wrapper ul,
+.remittance-module ul {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.crypto_module .module_item, .remittance-module .module_item{
+.crypto_module .module_item,
+.remittance-module .module_item {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.crypto_module .module_item.reverse, .remittance-module .module_item.reverse {
+.crypto_module .module_item.reverse,
+.remittance-module .module_item.reverse {
     flex-direction: row-reverse;
 }
 
-.crypto_module .module_item .item_text, .remittance-module .module_item .item_text{
-    width: 45%;    
+.crypto_module .module_item .item_text,
+.remittance-module .module_item .item_text {
+    width: 45%;
 }
 
-.crypto_module .module_item .item_text .item_title, .remittance-module .module_item .item_text .item_title{
+.crypto_module .module_item .item_text .item_title,
+.remittance-module .module_item .item_text .item_title {
     font-size: 2rem;
     margin-bottom: 25px;
 }
 
-.crypto_module .module_item .item_text .item_descr, .remittance-module .module_item .item_text .item_descr{
+.crypto_module .module_item .item_text .item_descr,
+.remittance-module .module_item .item_text .item_descr {
     color: var(--base-text-placeholder);
     margin-bottom: 50px;
     width: 60%;
 }
 
 
-.crypto_module .module_item .item_text .btn.uncolored, .remittance-module .module_item .item_text .btn.uncolored{
+.crypto_module .module_item .item_text .btn.uncolored,
+.remittance-module .module_item .item_text .btn.uncolored {
     color: var(--primary-solid);
     background-color: var(--base-text-primary);
     border: 1px solid var(--primary-solid);
     margin-right: 20px;
 }
 
-.crypto_module .module_item .item_images, .remittance-module .module_item .item_images{
+.crypto_module .module_item .item_images,
+.remittance-module .module_item .item_images {
     position: relative;
     width: 45%;
 }
 
 
-.crypto_module .module_item.crypto_acc .item_images img:nth-child(1){
+.crypto_module .module_item.crypto_acc .item_images img:nth-child(1) {
     position: absolute;
     top: -10%;
-    left:-10%;
+    left: -10%;
     z-index: 1;
 }
 
-.crypto_module .module_item.crypto_acc .item_images img:nth-child(2){
+.crypto_module .module_item.crypto_acc .item_images img:nth-child(2) {
     position: absolute;
     top: 8%;
-    left:-2%;
+    left: -2%;
     z-index: 2;
 }
 
-.crypto_module .module_item.crypto_acc .item_images img:nth-child(3){
+.crypto_module .module_item.crypto_acc .item_images img:nth-child(3) {
     position: absolute;
     bottom: 0%;
-    right:-5%;
+    right: -5%;
     z-index: 3;
 }
 
-.crypto_module .module_item.reverse .item_text{
+.crypto_module .module_item.reverse .item_text {
     transform: translateX(100px);
 }
 
 
-.crypto_module .module_item.crypto_exch .item_images img:nth-child(1){
+.crypto_module .module_item.crypto_exch .item_images img:nth-child(1) {
     position: absolute;
     top: 0%;
-    left:-5%;
+    left: -5%;
     z-index: 1;
 }
 
-.crypto_module .module_item.crypto_exch .item_images img:nth-child(2){
+.crypto_module .module_item.crypto_exch .item_images img:nth-child(2) {
     position: absolute;
     top: 0%;
-    right:15%;
+    right: 15%;
     z-index: 3;
 }
 
-.crypto_module .module_item.crypto_exch .item_images img:nth-child(3){
+.crypto_module .module_item.crypto_exch .item_images img:nth-child(3) {
     position: absolute;
     bottom: 0%;
-    left:0%;
+    left: 0%;
     z-index: 2;
 }
 
 
-.crypto_module .module_item.crypto_dep .item_images img:nth-child(1){
+.crypto_module .module_item.crypto_dep .item_images img:nth-child(1) {
     position: absolute;
     top: 10%;
-    left:5%;
+    left: 5%;
     z-index: 2;
 }
 
-.crypto_module .module_item.crypto_dep .item_images img:nth-child(2){
+.crypto_module .module_item.crypto_dep .item_images img:nth-child(2) {
     position: absolute;
     top: 15%;
-    right:10%;
+    right: 10%;
     z-index: 3;
 }
 
-.crypto_module .module_item.crypto_dep .item_images img:nth-child(3){
+.crypto_module .module_item.crypto_dep .item_images img:nth-child(3) {
     position: absolute;
     top: 43%;
-    left:0%;
+    left: 0%;
     z-index: 1;
 }
 
-.crypto_module .module_item.crypto_dep .item_images img:nth-child(4){
+.crypto_module .module_item.crypto_dep .item_images img:nth-child(4) {
     position: absolute;
     top: 50%;
-    right:10%;
+    right: 10%;
     z-index: 2;
 }
 
-.crypto_module .module_item.crypto_aml .item_images img:nth-child(1){
+.crypto_module .module_item.crypto_aml .item_images img:nth-child(1) {
     position: absolute;
     top: 15%;
-    left:0%;
+    left: 0%;
     z-index: 2;
 }
 
-.crypto_module .module_item.crypto_aml .item_images img:nth-child(2){
+.crypto_module .module_item.crypto_aml .item_images img:nth-child(2) {
     position: absolute;
     top: 42%;
-    right:40%;
+    right: 40%;
     z-index: 3;
 }
 
 
-.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(1){
+.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(1) {
     position: absolute;
     top: -10%;
-    right:0%;
+    right: 0%;
     z-index: 2;
 }
 
-.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(2){
+.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(2) {
     position: absolute;
     top: 28%;
-    left:0%;
+    left: 0%;
     z-index: 1;
 }
 
-.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(3){
+.crypto_module .module_item.crypto_scrochain .item_images img:nth-child(3) {
     position: absolute;
-    bottom:10%;
-    right:10%;
+    bottom: 10%;
+    right: 10%;
     z-index: 2;
 }
 
@@ -905,29 +929,29 @@ header .sub_menu li span {
 }
 
 
-.remittance-module .module_item .item_images img:first-child{
-     position: absolute;
-    bottom:20%;
-    right:20%;
+.remittance-module .module_item .item_images img:first-child {
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
     z-index: 2;
     max-width: 630px;
 }
 
-.remittance-module .module_item .item_images img.fx-rate{
-    bottom:0%;
-    right:20%;
+.remittance-module .module_item .item_images img.fx-rate {
+    bottom: 0%;
+    right: 20%;
     max-width: 530px;
 }
 
 
-.compliance-module .title{
+.compliance-module .title {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 25px;
     margin-top: 40px;
 }
 
-.compliance-module .wrapper{
+.compliance-module .wrapper {
     display: flex;
     flex-direction: column;
 }
@@ -938,7 +962,7 @@ header .sub_menu li span {
     gap: 20px;
 }
 
-.compliance-module .compliance_list li{
+.compliance-module .compliance_list li {
     padding: 10px 40px;
     color: var(--base-text-placeholder);
     border: 1px solid var(--base-text-placeholder);
@@ -946,72 +970,451 @@ header .sub_menu li span {
     cursor: pointer;
 }
 
-.compliance-module .compliance_list li._active{
+.compliance-module .compliance_list li._active {
     color: var(--base-elements);
     border: 1px solid var(--base-elements);
 }
 
 
 
-.compliance_descr .compliance_item{
+.compliance_descr .compliance_item {
     display: none;
 }
 
-.compliance_descr .compliance_item._active{
+.compliance_descr .compliance_item._active {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 
-.compliance_descr .compliance_item .item_text{
-    width: 45%;    
+.compliance_descr .compliance_item .item_text {
+    width: 45%;
 }
 
-.compliance_descr .compliance_item .item_text .item_title{
+.compliance_descr .compliance_item .item_text .item_title {
     font-size: 2rem;
     margin-bottom: 25px;
 }
 
-.compliance_descr .compliance_item .item_text .item_descr{
+.compliance_descr .compliance_item .item_text .item_descr {
     color: var(--base-text-placeholder);
     margin-bottom: 50px;
     width: 60%;
 }
 
 
-.compliance_descr .compliance_item .item_text .btn.uncolored{
+.compliance_descr .compliance_item .item_text .btn.uncolored {
     color: var(--primary-solid);
     background-color: var(--base-text-primary);
     border: 1px solid var(--primary-solid);
     margin-right: 20px;
 }
 
-.compliance_descr .compliance_item .item_images{
+.compliance_descr .compliance_item .item_images {
     position: relative;
 }
 
-.compliance_descr .compliance_item .item_images img:first-child{
+.compliance_descr .compliance_item .item_images img:first-child {
     position: absolute;
     top: 10%;
-   left:0%;
-   z-index: 2;
-   max-width: 730px;
+    left: 0%;
+    z-index: 2;
+    max-width: 730px;
 }
 
-footer{
+.contact_main-banner {
+    margin-top: 50px;
+    background-color: rgba(245, 245, 245, 0.5);
+    width: 100%;
+}
+
+.contact_main-banner .title {
+    font-size: 3rem;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.contact_main-banner .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner_contacts li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--base-text-placeholder);
+    width: 70%;
+}
+
+.banner_contacts li p {
+    color: var(--base-text-placeholder)
+}
+
+.contact_main-banner .main_banner-descr {
+    position: relative;
+}
+
+.contact_main-banner .descr_adress {
+    position: absolute;
+    background: var(--base-text-primary);
+    border-radius: 5px;
+    padding: 5px 15px;
+    top: 32%;
+    left: 54%;
+    width: 200px;
+}
+
+.contact_main-banner .descr_adress .descr_title {
+    margin-bottom: 5px;
+}
+
+.contact_main-banner .descr_adress p {
+    font-size: 12px;
+    color: var(--base-text-placeholder);
+}
+
+.contact_form h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.contact_form legend {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: none;
+}
+
+.contact_form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+label.checkbox-button {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--base-text-placeholder);
+    border: 1px solid var(--base-text-placeholder);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+
+input[type="checkbox"]:checked+label.checkbox-button {
+    background-color: var(--base-elements);
+    border: 1px solid var(--base-elements);
+    color: var(--base-text-primary)
+}
+
+.input_wrapper{
+    display: flex;
+    gap: 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 50%;
+}
+
+.form-group.txt{
+    width: 100%;
+}
+
+form .form_input {
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    background-color: #F4F5F6
+}
+
+#formMessage {
+    height: 150px;
+}
+
+form .btn {
+    padding: 15px 50px;
+}
+
+.integrations {
+    background-color:#f6f6f6;
+    position: relative;
+    margin-bottom: 400px;
+}
+
+
+.integrations .breadscrump{
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.integrations .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.integration_content{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.integration_img{
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-end;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.integration_img img {
+    position: absolute;
+    top: 0;
+}
+
+.integration_content .title{
+    font-size: 3rem;
+}
+
+.integration_content .subtitle{
+    padding: 2px 10px;
+    background-color:#FFCC4A;
+    max-width: 125px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.integration_content .item_descr{
+    width: 50%;
+    margin-bottom: 100px;
+}
+
+.integrations .pattern-bot{
+    position: absolute;
+    left: -5%;
+    bottom: 1%;
+}
+
+.integrations .pattern-top{
+    position: absolute;
+    top:0;
+    left: 45%;
+}
+
+.open_sanctions
+,.zign_sec{
+    background-color: #E3E3E1;
+    position: absolute;
+    left: 30%;
+    top: 85%;
+    padding: 40px;
+    max-width: 400px;
+    border-radius: 25px;
+    height: 460px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+}
+
+.zign_sec{
+    background-color: var(--base-text-primary);
+    left: 52%;
+}
+
+.open_sanctions .partner_wrapper,
+.zign_sec .partner_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.open_sanctions .partner_wrapper img {
+    width: 300px;
+}
+
+.zign_sec .partner_wrapper img {
+    width: 170px;
+}
+
+.open_sanctions .partner_wrapper .partner_descr,
+.zign_sec .partner_wrapper .partner_descr{
+    width: 80%;
+}
+
+.open_sanctions .partner_wrapper .partner_descr{
+    margin-bottom: 60px;
+}
+
+.open_sanctions .btn{
+    background-color: var(--base-text-primary);
+    color: var(--base-elements);
+    border: 1px solid var(--base-elements);
+}
+
+
+.open_sanctions .btn:hover{
+    background-color: var(--base-elements);
+    color: var(--base-text-primary);
+    border-color: var(--base-text-primary);
+}
+
+.blockchain .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blockchain_img,
+.blockchain_descr{
+    width: 50%;
+}
+
+.blockchain_img{
+    position: relative;
+}
+
+
+.blockchain_img img:nth-child(2){
+    position: absolute;
+    right: 32%;
+    top: 30%;
+    z-index: 2;
+}
+
+.blockchain_descr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blockchain_descr .title{
+    font-size: 3rem;
+}
+
+
+.blockchain_list {
+    position: relative;
+}
+
+.blockchain_list .line {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    height: 580px;
+}
+
+.blockchain_list .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-top: 80px;
+}
+
+.blockchain_list .list_item {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.blockchain_list .list_item.reverse {
+    flex-direction: row-reverse;
+}
+
+.blockchain_list .empty_item,
+.blockchain_list .list_item-content {
+    width: 45%;
+}
+
+.list_item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blockchain_list .list_item.reverse {
+    text-align: right;
+}
+
+.blockchain_list .list_item .list_item-descr {
+    color: var(--base-text-placeholder);
+}
+
+.payments_n_baas{
+    background: var(--primary-gradient);
+}
+
+.payments_n_baas .title{
+    color: var(--base-text-primary);
+    font-size: 3rem;
+    margin-bottom: 40px
+}
+
+.payments_n_baas ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:80px;
+}
+
+.payments_n_baas ul .payment_item{
+    display: flex;
+    gap: 40px;
+    width: 45%;
+}
+
+.payments_n_baas ul .payment_item img {
+    height: 85px;
+    max-width: 110px;
+}
+
+.payments_n_baas ul .payment_item .item_text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--base-text-primary)
+}
+
+.payments_n_baas ul .payment_item .item_text .item_title{
+    font-size: 1,5rem;
+}
+
+.payments_n_baas ul .payment_item .item_text .item_descr {
+    line-height: 1.5em;
+}
+
+footer {
     background: var(--primary-gradient)
 }
 
-footer .wrapper{
-    display:flex;
+footer .wrapper {
+    display: flex;
     align-items: flex-start;
     justify-content: space-between;
     border-bottom: 1px solid var(--base-text-primary);
     padding: 40px 0;
 }
 
-.footer_links{
+.footer_links {
     width: 50%;
     display: flex;
     justify-content: space-between;
@@ -1024,16 +1427,16 @@ footer ul li {
     margin-bottom: 8px;
 }
 
-footer ul li a:hover{
+footer ul li a:hover {
     opacity: 1;
 }
 
-footer ul li a{
+footer ul li a {
     color: var(--base-text-primary);
     opacity: 0.8;
 }
 
-footer ul li.title{
+footer ul li.title {
     font-weight: 600;
     margin-bottom: 20px;
     opacity: 1;

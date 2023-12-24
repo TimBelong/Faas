@@ -76,77 +76,107 @@
         </div>
     </header>
 
-    <div class="main_banner">
+    <div class="contact_main-banner">
         <div class="container">
-            <img src="img/Ellipse1.png" alt="elipse" class="elipse right">
-            <img src="img/Ellipse2.png" alt="elipse" class="elipse left">
-
             <div class="wrapper">
                 <div class="main_banner-descr">
-                    <h1 class="title">Payments and Transfers Module</h1>
-                    <ul>
-                        <li>Модуль "Payments and Transfers" фокусируется на обработке и управлении всеми видами платежей
-                            и переводов.</li>
-                    </ul>
-                    <a href="contacts.html" class="btn">Contact Us</a>
+                    <h1 class="title">Contact our team to find out more</h1>
+                    <img src="img/Map.png" alt="">
+                    <div class="descr_adress">
+                        <h5 class="descr_title">Czech Republic</h5>
+                        <p>Smith Street 18, Praha 4 - Nusle 140 00</p>
+                    </div>
                 </div>
-                <div class="main_banner-img">
-                    <img src="img/payment.png" alt="Payments and Transfers" class="payments">
-                </div>
+                <ul class="banner_contacts">
+                    <li>
+                        <h4>Support</h4>
+                        <p>Our friendly team is here to help.</p>
+                        <a href="mailto:support@finance.com">support@finance.com</a>
+                    </li>
+                    <li>
+                        <h4>Adress</h4>
+                        <p>Smith Street 18, Praha 4 - Nusle 140 00</p>
+                    </li>
+                    <li>
+                        <h4>Phone</h4>
+                        <p>Our friendly team is here to help..</p>
+                        <a href="tel:+4202345765">+420 2345-7655</a>
+                    </li>
+                </ul>
             </div>
 
         </div>
     </div>
 
-    <div class="transfers__module">
+    <div class="contact_form">
         <div class="container">
-            <div class="breadscrump">
-                <a href="/">Home /</a> Payments and Transfers Module
-            </div>
             <div class="wrapper">
-                <h2 class="title">Payments and Transfers Module</h2>
-                <p class="subtitle">Модуль "Payments and Transfers" фокусируется на обработке и управлении всеми видами
-                    платежей и переводов.</p>
-                <ul>
-                    <li class="item_title">
-                        <span> <img src="img/icons/sepa.png" alt="SEPA Payments"></span>
-                        <h3 class="item_title">SEPA Payments</h3>
-                        <p class="item_descr">Обеспечивает возможность проведения платежей в рамках единой зоны платежей
-                            в евро (SEPA), позволяя пользователям эффективно осуществлять трансграничные платежи внутри
-                            Евросоюза.</p>
-                    </li>
-                    <li class="item_title colored">
-                        <span><img src="img/icons/wire-transfers.png" alt="WIRE Transfers"></span>
-                        <h3 class="item_title">WIRE Transfers</h3>
-                        <p class="item_descr">Инициирование, оформление, осуществление сделки и достижение результата —
-                            это именно то, чем мы занимаемся каждый день.</p>
-                    </li>
-                    <li class="item_title">
-                        <span><img src="img/icons/domestic-payments.png" alt="Domestic Payments"></span>
-                        <h3 class="item_title">Domestic Payments</h3>
-                        <p class="item_descr">Управление внутренними платежами, позволяя осуществлять быстрые и надежные
-                            транзакции в пределах одной страны.</p>
-                    </li>
-                    <li class="item_title">
-                        <span><img src="img/icons/deposits.png" alt="Deposits by Card"></span>
-                        <h3 class="item_title"> Deposits by Card</h3>
-                        <p class="item_descr">Возможность проведения депозитов через банковские карты, что обеспечивает
-                            удобство и гибкость для пользователей при пополнении счетов.</p>
-                    </li>
-                    <li class="item_title">
-                        <span><img src="img/icons/payouts.png" alt="Payouts to Card"></span>
-                        <h3 class="item_title">Payouts to Card</h3>
-                        <p class="item_descr">Функционал для осуществления выплат на банковские карты, упрощая процесс
-                            возврата средств или выплаты доходов клиентам.</p>
-                    </li>
-                    <li class="item_title">
-                        <span><img src="img/icons/internal-pyouts.png" alt="Online Management Reporting"></span>
-                        <h3 class="item_title">Internal Payments</h3>
-                        <p class="item_descr">Управление внутренними платежами и переводами между счетами внутри
-                            системы, что повышает оперативность и удобство для пользователей.</p>
-                    </li>
-                </ul>
-                <a href="contacts.html" class="btn">Contact Us</a>
+                <div class="form">
+                    <form method="POST" action="sendmail.php" id="contact-form" class="form__body">
+                        <h2>Ready to get started?</h2>
+
+                        <fieldset>
+                            <legend>Modules</legend>
+
+                            <input type="checkbox" id="core_module" name="modules[]" value="core_module" class="_req">
+                            <label for="core_module" class="checkbox-button">Core Module</label>
+
+                            <input type="checkbox" id="crypto_module" name="modules[]" value="crypto_module"
+                                class="_req">
+                            <label for="crypto_module" class="checkbox-button">Crypto Module</label>
+
+                            <input type="checkbox" id="transfers_module" name="modules[]" value="transfers_module"
+                                class="_req">
+                            <label for="transfers_module" class="checkbox-button">Payments and Transfers Module</label>
+
+                            <input type="checkbox" id="remittance_module" name="modules[]" value="remittance_module"
+                                class="_req">
+                            <label for="remittance_module" class="checkbox-button">Money Remittance Module</label>
+
+                            <input type="checkbox" id="compliance_module" name="modules[]" value="compliance_module"
+                                class="_req">
+                            <label for="compliance_module" class="checkbox-button">Compliance Module</label>
+                        </fieldset>
+
+                        <div class="input_wrapper">
+                            <div class="form-group">
+                                <label for="formName">First name*</label>
+                                <input id="formName" type="text" name="name" class="form_input _req"
+                                    placeholder="Your first name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formSurname">Last Name*</label>
+                                <input id="formSurname" type="text" name="surname" class="form_input _req"
+                                    placeholder="Your last name">
+                            </div>
+                        </div>
+
+                        <div class="input_wrapper">
+                            <div class="form-group">
+                                <label for="formEmail">Email*</label>
+                                <input id="formEmail" type="text" name="email" class="form_input _req _email"
+                                    placeholder="Your working email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formNumber">Phone*</label>
+                                <input id="formNumber" type="number" name="phone" class="form_input _number"
+                                    placeholder="Your phone number">
+                            </div>
+                        </div>
+
+                        <div class="form-group txt">
+                            <label for="formMessage">Additional Details</label>
+                            <textarea id="formMessage" name="message" class="form_input"
+                                placeholder="Your message"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="form_button btn" style="border: none;">Contact Us</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
