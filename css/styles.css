@@ -119,6 +119,10 @@ header .menu_list li a {
     text-decoration: none;
 }
 
+.sub_menu-btn.arrow{
+    transform: translateY(2px);
+}
+
 .burger__menu{
     display: none;
 }
