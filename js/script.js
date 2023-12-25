@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let burgerMenu = document.querySelector('.burger__menu');
+    let mobileMenu = document.querySelector('.mobile_menu');
+
+    burgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('_active');
+        burgerMenu.classList.toggle('_active');
+    });
+
+    // Main menu
     let subMenuBtn = document.querySelector('.sub_menu-btn'),
         subMenu = document.querySelector('.sub_menu');
 
@@ -11,6 +20,22 @@ document.addEventListener('DOMContentLoaded', function () {
             subMenu.classList.remove('_active');
         }
     });
+
+    // Mobile menu
+    let subMenuBtnMob = document.querySelector('.mobile_menu .sub_menu-btn'),
+        subMenuMob = document.querySelector('.mobile_menu .sub_menu');
+
+    subMenuBtnMob.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent the click event from propagating to the window
+        subMenuMob.classList.toggle('_active');
+    });
+
+    window.addEventListener('click', (event) => {
+        if (!event.target.matches('.sub_menu-btn') && !event.target.closest('.sub_menu')) {
+            subMenuMob.classList.remove('_active');
+        }
+    });
+
 
     const detailsElements = document.querySelectorAll('.module_descr details');
     const imageElements = document.querySelectorAll('.module_img .module-image');
@@ -105,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom <= (window.innerHeight  || document.documentElement.clientHeight) &&
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
@@ -184,91 +209,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    //contact form
-    const form = document.getElementById('contact-form');
-
-    form.addEventListener('submit', formSend);
-
-    function formSend(e) {
-        e.preventDefault();
-
-        let error = formValidate(form);
-        let formData = new FormData(form);
-
-        if (error === 0) {
-            form.classList.add('_sending');
-
-            fetch(form.getAttribute('action'), {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    if (response.ok) {
-                        form.reset();
-                        form.classList.remove('_sending');
-                    } else {
-                        alert('Error submitting the form');
-                        form.classList.remove('_sending');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error during form submission:', error);
-                    alert('Error submitting the form');
-                    form.classList.remove('_sending');
-                });
-        } else {
-            alert('Fill in all required fields');
-        }
-    }
-
-    function formValidate(form) {
-        let error = 0;
-        let formReq = document.querySelectorAll('._req');
-        let atLeastOneCheckboxChecked = false;
-
-        for (let index = 0; index < formReq.length; index++) {
-            const input = formReq[index];
-
-            if (input.type === 'checkbox') {
-                if (input.checked) {
-                    atLeastOneCheckboxChecked = true;
-                }
-            } else {
-                if (input.classList.contains('_email')) {
-                    if (emailTest(input)) {
-                        formAddError(input);
-                        error++;
-                    }
-                } else {
-                    if (input.value === '') {
-                        formAddError(input);
-                        error++;
-                    }
-                }
-            }
-        }
-
-        if (!atLeastOneCheckboxChecked) {
-            error++;
-        }
-
-        return error;
-    }
-
-    function formAddError(input) {
-        input.parentElement.classList.add('_error');
-        input.classList.add('_error');
-    }
-
-    function formRemoveError(input) {
-        input.parentElement.classList.remove('_error');
-        input.classList.remove('_error');
-    }
-
-    function emailTest(input) {
-        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-    }
-
     //partners 
-
 });

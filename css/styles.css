@@ -28,6 +28,10 @@ body {
     overflow-x: hidden;
 }
 
+.mob{
+    display: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -38,7 +42,10 @@ ul li {
 
 .container {
     padding: 40px 200px;
-    height: 100%;
+}
+
+.mobile_menu{
+    display: none;
 }
 
 header {
@@ -54,7 +61,9 @@ header {
 }
 
 header .container {
-    padding: 0 200px;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 header .wrapper {
@@ -108,6 +117,10 @@ header .menu_list li a {
     font-size: .875rem;
     font-weight: 400;
     text-decoration: none;
+}
+
+.burger__menu{
+    display: none;
 }
 
 .btn {
@@ -171,13 +184,13 @@ header .sub_menu li span {
 .main_banner {
     width: 100%;
     margin-top: 60px;
-    height: 500px;
     background-color: rgba(245, 245, 245, 0.5);
     position: relative;
 }
 
 .main_banner .elipse {
     position: absolute;
+    width: 50%;
 }
 
 .main_banner .elipse.right {
@@ -194,7 +207,6 @@ header .sub_menu li span {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
     width: 100%;
 }
 
@@ -258,6 +270,7 @@ header .sub_menu li span {
 
 .how_to-content .title {
     font-size: 3rem;
+    margin: 40px 0px;
 }
 
 .how_to-content ul {
@@ -361,21 +374,8 @@ header .sub_menu li span {
     overflow-y: hidden;
 }
 
-.calendly-inline-widget {
-    width: 70%;
-    overflow-y: hidden !important;
-}
-
-._cUP1np9gMvFQrcPftuf._Y8HCTxgNkwxXcG_DCXx {
-    padding: 0 !important;
-}
-
-._cUP1np9gMvFQrcPftuf._Y8HCTxgNkwxXcG_DCXx {
-    margin: 0px !important;
-}
-
 .calendly-inline-widget iframe {
-    width: 100% !important;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -542,10 +542,10 @@ header .sub_menu li span {
     width: 45%;
 }
 
-
 .money_provider_section .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .money_provider_section .title {
@@ -715,6 +715,13 @@ header .sub_menu li span {
     padding: 15px 50px;
 }
 
+
+.remittance-module,
+.crypto_module{
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+}
 
 .crypto_module .title,
 .remittance-module .title {
@@ -954,6 +961,7 @@ header .sub_menu li span {
 .compliance-module .wrapper {
     display: flex;
     flex-direction: column;
+    gap: 40px;
 }
 
 .compliance-module .compliance_list {
@@ -1054,8 +1062,16 @@ header .sub_menu li span {
     color: var(--base-text-placeholder)
 }
 
+.banner_contacts li a{
+    color: var(--base-elements);
+}
+
 .contact_main-banner .main_banner-descr {
     position: relative;
+}
+
+.contact_main-banner .main_banner-descr img{
+    width: 100%;
 }
 
 .contact_main-banner .descr_adress {
@@ -1088,6 +1104,9 @@ header .sub_menu li span {
 
 fieldset {
     border: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .contact_form form {
@@ -1119,7 +1138,7 @@ input[type="checkbox"]:checked+label.checkbox-button {
     color: var(--base-text-primary)
 }
 
-.input_wrapper{
+.input_wrapper {
     display: flex;
     gap: 40px;
 }
@@ -1131,7 +1150,7 @@ input[type="checkbox"]:checked+label.checkbox-button {
     width: 50%;
 }
 
-.form-group.txt{
+.form-group.txt {
     width: 100%;
 }
 
@@ -1151,24 +1170,25 @@ form .btn {
 }
 
 .integrations {
-    background-color:#f6f6f6;
+    background-color: #f6f6f6;
     position: relative;
     margin-bottom: 400px;
+    box-sizing: border-box;
 }
 
 
-.integrations .breadscrump{
+.integrations .breadscrump {
     width: 300px;
     margin-bottom: 40px;
 }
 
-.integrations .wrapper{
+.integrations .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.integration_content{ 
+.integration_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1177,10 +1197,10 @@ form .btn {
     height: 100%;
 }
 
-.integration_img{
+.integration_img {
     display: flex;
     flex-direction: column;
-    align-items:  flex-end;
+    align-items: flex-end;
     justify-content: flex-end;
     width: 50%;
 }
@@ -1190,37 +1210,37 @@ form .btn {
     top: 0;
 }
 
-.integration_content .title{
+.integration_content .title {
     font-size: 3rem;
 }
 
-.integration_content .subtitle{
+.integration_content .subtitle {
     padding: 2px 10px;
-    background-color:#FFCC4A;
+    background-color: #FFCC4A;
     max-width: 125px;
     text-align: center;
     border-radius: 50px;
 }
 
-.integration_content .item_descr{
+.integration_content .item_descr {
     width: 50%;
     margin-bottom: 100px;
 }
 
-.integrations .pattern-bot{
+.integrations .pattern-bot {
     position: absolute;
     left: -5%;
     bottom: 1%;
 }
 
-.integrations .pattern-top{
+.integrations .pattern-top {
     position: absolute;
-    top:0;
+    top: 0;
     left: 45%;
 }
 
-.open_sanctions
-,.zign_sec{
+.integrations .open_sanctions,
+.integrations .zign_sec {
     background-color: #E3E3E1;
     position: absolute;
     left: 30%;
@@ -1229,83 +1249,87 @@ form .btn {
     max-width: 400px;
     border-radius: 25px;
     height: 460px;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
-.zign_sec{
+.integrations .zign_sec {
     background-color: var(--base-text-primary);
     left: 52%;
 }
 
-.open_sanctions .partner_wrapper,
-.zign_sec .partner_wrapper{
+.integrations .open_sanctions .partner_wrapper,
+.integrations .zign_sec .partner_wrapper {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.open_sanctions .partner_wrapper img {
+.integrations .open_sanctions .partner_wrapper img {
     width: 300px;
 }
 
-.zign_sec .partner_wrapper img {
+.integrations .zign_sec .partner_wrapper img {
     width: 170px;
 }
 
-.open_sanctions .partner_wrapper .partner_descr,
-.zign_sec .partner_wrapper .partner_descr{
+.integrations .open_sanctions .partner_wrapper .partner_descr,
+.integrations .zign_sec .partner_wrapper .partner_descr {
     width: 80%;
 }
 
-.open_sanctions .partner_wrapper .partner_descr{
+.integrations_mob{
+    display: none;
+}
+
+.open_sanctions .partner_wrapper .partner_descr {
     margin-bottom: 60px;
 }
 
-.open_sanctions .btn{
+.open_sanctions .btn {
     background-color: var(--base-text-primary);
     color: var(--base-elements);
     border: 1px solid var(--base-elements);
 }
 
 
-.open_sanctions .btn:hover{
+.open_sanctions .btn:hover {
     background-color: var(--base-elements);
     color: var(--base-text-primary);
     border-color: var(--base-text-primary);
 }
 
-.blockchain .wrapper{
+.blockchain .wrapper {
     display: flex;
     justify-content: space-between;
 }
 
 .blockchain_img,
-.blockchain_descr{
+.blockchain_descr {
     width: 50%;
 }
 
-.blockchain_img{
+.blockchain_img {
     position: relative;
 }
 
 
-.blockchain_img img:nth-child(2){
+.blockchain_img img:nth-child(2) {
     position: absolute;
     right: 32%;
     top: 30%;
     z-index: 2;
 }
 
-.blockchain_descr{
+.blockchain_descr {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
 }
 
-.blockchain_descr .title{
+.blockchain_descr .title {
     font-size: 3rem;
 }
 
@@ -1358,25 +1382,25 @@ form .btn {
     color: var(--base-text-placeholder);
 }
 
-.payments_n_baas{
+.payments_n_baas {
     background: var(--primary-gradient);
 }
 
-.payments_n_baas .title{
+.payments_n_baas .title {
     color: var(--base-text-primary);
     font-size: 3rem;
     margin-bottom: 40px
 }
 
-.payments_n_baas ul{
+.payments_n_baas ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap:80px;
+    gap: 80px;
 }
 
-.payments_n_baas ul .payment_item{
+.payments_n_baas ul .payment_item {
     display: flex;
     gap: 40px;
     width: 45%;
@@ -1387,15 +1411,15 @@ form .btn {
     max-width: 110px;
 }
 
-.payments_n_baas ul .payment_item .item_text{
+.payments_n_baas ul .payment_item .item_text {
     display: flex;
     flex-direction: column;
     gap: 10px;
     color: var(--base-text-primary)
 }
 
-.payments_n_baas ul .payment_item .item_text .item_title{
-    font-size: 1,5rem;
+.payments_n_baas ul .payment_item .item_text .item_title {
+    font-size: 1, 5rem;
 }
 
 .payments_n_baas ul .payment_item .item_text .item_descr {
@@ -1420,6 +1444,10 @@ footer .wrapper {
     justify-content: space-between;
 }
 
+.mob_footer_links{
+    display: none;
+}
+
 footer ul li {
     list-style-type: none;
     color: var(--base-text-primary);
@@ -1440,4 +1468,1149 @@ footer ul li.title {
     font-weight: 600;
     margin-bottom: 20px;
     opacity: 1;
+}
+
+@media(max-width: 1600px) {
+    .container {
+        padding: 40px 100px;
+    }
+
+    .main_banner .elipse.right {
+        right: 10%;
+        top: 0%;
+    }
+    
+    .main_banner .elipse.left {
+        top: -30%;
+        left: 0%;
+    }
+
+    .main_banner .main_banner-descr .title {
+        font-size: 4rem;
+    }
+
+    .money_provider_section .title h2 {
+        font-size: 2.5rem;
+    }
+
+    .footer_links {
+        width: 60%;
+    }
+
+
+    .crypto_module .module_item.crypto_acc .item_images img:nth-child(1) {
+        position: absolute;
+        top: 0%;
+        left: -10%;
+        z-index: 1;
+    }
+
+    .crypto_module .module_item.crypto_acc .item_images img:nth-child(2) {
+        position: absolute;
+        top: 20%;
+        left: -2%;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .crypto_module .module_item.crypto_acc .item_images img:nth-child(3) {
+        position: absolute;
+        bottom: 0%;
+        right: -5%;
+        z-index: 3;
+    }
+
+
+    .crypto_module .module_item.crypto_dep .item_images img:nth-child(2) {
+        position: absolute;
+        top: 15%;
+        right: 15%;
+        z-index: 3;
+    }
+
+
+    .crypto_module .module_item.crypto_dep .item_images img:nth-child(4) {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        z-index: 2;
+    }
+
+    .crypto_module .module_item.crypto_aml .item_images img:nth-child(1) {
+        position: absolute;
+        top: 15%;
+        left: -10%;
+        z-index: 2;
+    }
+
+
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(1) {
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        z-index: 2;
+    }
+
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(2) {
+        position: absolute;
+        top: 28%;
+        left: 0%;
+        z-index: 1;
+    }
+
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(3) {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        z-index: 2;
+    }
+
+    .crypto_module .module_item.reverse .item_text {
+        transform: translateX(100px);
+    }
+
+    .remittance-module .module_item:nth-child(3) .item_images img:nth-child(1) {
+        right: 0;
+    }
+
+    .remittance-module .module_item .item_images img.fx-rate {
+        bottom: 0%;
+        right: 0%;
+        max-width: 530px;
+    }
+
+    .compliance-module .container {
+        padding-bottom: 80px;
+    }
+
+    .compliance_descr .compliance_item:first-child .item_images img:first-child {
+        width: 90%;
+    }
+
+    .compliance_descr .compliance_item .item_images img:last-child {
+        width: 80%;
+    }
+
+    .integrations {
+        margin-bottom: 300px;
+    }
+
+    .integrations .pattern-bot {
+        position: absolute;
+        left: -8%;
+        bottom: 0%;
+    }
+
+    .integrations .open_sanctions {
+        left: 24%;
+        top: 75%;
+        padding: 25px;
+        max-width: 350px;
+        height: 420px;
+    }
+
+    .integrations .zign_sec {
+        top: 75%;
+        left: 50%;
+        padding: 25px;
+        max-width: 350px;
+        height: 420px;
+    }
+
+    .integrations .open_sanctions .partner_wrapper .partner_descr,
+    .integrations .zign_sec .partner_wrapper .partner_descr {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1200px) {
+    .container {
+        padding: 40px 50px;
+    }
+
+    .main_banner .elipse.right {
+        right: 10%;
+        top: 10%;
+    }
+    
+    .main_banner .elipse.left {
+        top: -10%;
+        left: 0%;
+    }
+
+    .main_banner .main_banner-descr .title {
+        font-size: 3.5rem;
+    }
+
+    .main_banner .main_banner-img img {
+        width: 90%;
+    }
+
+    .appointment_section .container {
+        padding-left: 0;
+        padding-bottom: 0px;
+    }
+
+    .appointment_section .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .appointment_descr {
+        padding: 40px 50px;
+        padding-bottom: 0px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .appointment_descr .btn,
+    .appointment_descr .subtitle {
+        display: none;
+    }
+
+
+    .module_section .module_descr {
+        width: 40%;
+    }
+
+    .module_section .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .module_img {
+        width: 35%;
+        position: absolute;
+        left: 60%;
+        top: 20%;
+    }
+
+    .money_provider_section .title {
+        width: 40%;
+    }
+
+    .money_provider_section .title h2 {
+        font-size: 2rem;
+    }
+
+    .money_provider_section .provider_img-item {
+        max-width: 130px;
+    }
+
+    .crypto_module .module_item img.shape,
+    .remittance-module .module_item img.shape{
+        width: 100%;
+    }
+
+    .crypto_module .wrapper ul,
+    .remittance-module ul {
+        gap: 100px;
+    }
+
+    .crypto_module .module_item.crypto_acc .item_images img:nth-child(1) {
+        position: absolute;
+        top: 0%;
+        left: -20%;
+        z-index: 1;
+        width: 80%;
+    }
+
+    .crypto_module .module_item.crypto_acc .item_images img:nth-child(2) {
+        position: absolute;
+        top: 20%;
+        left: -2%;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .crypto_module .module_item.crypto_acc .item_images img:nth-child(3) {
+        position: absolute;
+        bottom: -10%;
+        right: 5%;
+        z-index: 3;
+        width: 80%;
+    }
+
+    .crypto_module .module_item.crypto_exch .item_images img:nth-child(1) {
+        position: absolute;
+        top: 0%;
+        left: -15%;
+        z-index: 1;
+        width: 80%;
+    }
+    
+    .crypto_module .module_item.crypto_exch .item_images img:nth-child(2) {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        z-index: 3;
+        width: 60%;
+    }
+    
+    .crypto_module .module_item.crypto_exch .item_images img:nth-child(3) {
+        position: absolute;
+        bottom: -10%;
+        left: 0%;
+        z-index: 2;
+        width: 80%;
+    }
+
+    .crypto_module .module_item.crypto_dep .item_images img:nth-child(1) {
+        width: 60%;
+    }
+
+
+    .crypto_module .module_item.crypto_dep .item_images img:nth-child(2) {
+        position: absolute;
+        top: 15%;
+        right: 0%;
+        z-index: 3;
+        width: 60%;
+    }
+
+    .crypto_module .module_item.crypto_dep .item_images img:nth-child(3) {
+        width: 60%;
+    }
+
+
+    .crypto_module .module_item.crypto_dep .item_images img:nth-child(4) {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        z-index: 2;
+        width: 60%;
+    }
+
+    .crypto_module .module_item.crypto_aml .item_images img:nth-child(1) {
+        position: absolute;
+        top: 0%;
+        left: -20%;
+        z-index: 2;
+        width: 150%;
+    }
+
+    .crypto_module .module_item.crypto_aml .item_images img:nth-child(2) {
+        width: 60%;
+    }
+
+
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(1) {
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        z-index: 2;
+    }
+
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(2) {
+        position: absolute;
+        top: 28%;
+        left: 0%;
+        z-index: 1;
+    }
+
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(3) {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        z-index: 2;
+    }
+
+    .crypto_module .module_item.reverse .item_text {
+        transform: translateX(0px);
+    }
+
+    .remittance-module .module_item .item_images img:nth-child(1){
+        width: 350px;
+    }
+
+    .compliance_descr .compliance_item:nth-child(3) .item_images img:first-child,
+    .compliance_descr .compliance_item:nth-child(4) .item_images img:first-child {
+        width: 80%;
+    }
+
+    .integrations{
+        margin-bottom: 0;
+    }
+
+    .integrations .pattern-bot{
+        left: -15%;
+    }
+
+    .integrations .pattern-top{
+        height: 150px;
+    }
+    .integration_content .title {
+        font-size: 2.5rem;
+    }
+
+    .integration_content .item_descr {
+        width: 80%;
+        margin-bottom:50px;
+    }
+
+    .integrations .open_sanctions,
+    .integrations .zign_sec{
+        display: none;
+    }
+
+    .integrations_mob {
+        display: block;
+    }
+
+    .integrations_mob .wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .integrations_mob .open_sanctions,
+    .integrations_mob .zign_sec{
+        background-color: #E3E3E1;
+        padding: 30px 20px;
+        border-radius: 25px;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .integratintegrations_mobions .open_sanctions  img {
+        width: 300px;
+    }
+    
+    .integrations_mob .zign_sec  img {
+        width: 170px;
+    }
+
+    .blockchain_img img:nth-child(2) {
+        right: 12%;
+    }
+
+    .blockchain_img, .blockchain_descr {
+        width: 80%;
+    }
+
+    .blockchain_list .wrapper {
+        gap: 40px;
+    }
+
+    .payments_n_baas .title {
+        font-size: 2.5rem;
+    }
+
+    .payments_n_baas ul {
+        gap: 40px;
+    }
+
+    .payments_n_baas ul .payment_item {
+        gap: 25px;
+    }
+}
+
+@media(max-width: 900px){
+    .container {
+        padding: 40px;
+    }
+    .mob{
+        display: block;
+    }
+
+    .pc{
+        display: none;
+    }
+
+    header .menu_list {
+       display: none;
+    }
+
+    .mobile_menu{
+        display: block;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--base-text-primary);
+        z-index: 9;
+        padding: 40px;
+        border-radius: 0 0 50px 50px;
+        transition: all 0.5s ease 0s;
+    }
+
+    .mobile_menu._active{
+        top: 7%;
+    }
+
+    .mobile_menu .menu_list {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    
+    .mobile_menu .menu_list li {
+        list-style-type: none;
+        color: var(--base-text-secondary);
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;       
+        font-weight: 600;
+    }
+    
+    .mobile_menu .menu_list li::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0%;
+        background-color: var(--base-text-primary);
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        transition: width 0.3s;
+    }
+    
+    .mobile_menu .menu_list li:hover:after {
+        width: 100%;
+    }
+    
+    .mobile_menu .menu_list li img {
+        width: 15px;
+        transform: translateY(1px);
+    }
+    
+    .mobile_menu .menu_list li a {
+        color: var(--base-text-secondary);
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .mobile_menu .sub_menu {
+        background-color: var(--base-text-primary);
+        position: absolute;
+        top: 180%;
+        left: -100%;
+        padding: 20px;
+        max-height: 200px;
+        width: 600px;
+        gap: 20px;
+        border-radius: 5px;
+        box-shadow: var(--dropdown-box-shadow);
+        display: none;
+        transition: height 0.9s ease;
+    }
+    
+    .mobile_menu .sub_menu._active {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .mobile_menu .sub_menu li a {
+        color: var(--base-text-secondary);
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .mobile_menu .sub_menu li span {
+        background-color: #f6f7f8;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger__menu {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 25px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    
+    .burger__menu span,
+    .burger__menu::before,
+    .burger__menu::after {
+        position: absolute;
+        height: 4px;
+        width: 40px;
+        transition: all 0.3s ease 0s;
+        background-color: var(--base-text-primary);
+        border-radius: 100px;
+    }
+    
+    
+    .burger__menu::before,
+    .burger__menu::after {
+        content: "";
+    }
+    
+    .burger__menu::before {
+        top: 0;
+    }
+    
+    .burger__menu::after {
+        bottom: 0;
+    }
+    
+    .burger__menu span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    
+    .burger__menu._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    
+    .burger__menu._active::before {
+        top: 50%;
+        transform: rotate(45deg) translate(0px, -50%);
+    }
+    
+    .burger__menu._active::after {
+        bottom: 50%;
+        transform: rotate(-45deg) translate(0px, 50%);
+    }
+
+    .main_banner .elipse.right {
+        right: 10%;
+        top: 20%;
+    }
+    
+    .main_banner .elipse.left {
+        top: 0%;
+        left: 0%;
+    }
+
+    .main_banner .main_banner-descr .title {
+        font-size: 2.5rem;
+    }
+
+    .how_to-content .title {
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+
+    .how_to-content ul {
+        gap: 20px;
+    }
+
+    .how_to-content ul li {
+        width: 150px;
+    }
+
+    .how_to img {
+        width: 40%;
+        transform: translateY(35px) translateX(-80px);
+        z-index: 5;
+    }
+
+    .calendly-inline-widget {
+        transform: translateY(-50px);
+        height: 980px;
+    }
+
+    .partner_item {
+        padding: 30px 15px;
+    }
+
+    .partner_item:last-child {
+        padding: 30px;
+    }
+
+    .module_section .wrapper{
+        margin-bottom: 20px;
+    }
+
+    .module_img {
+        width: 45%;
+        position: absolute;
+        left: 60%;
+        top: 20%;
+    }
+
+    .transfers__module .title {
+        font-size: 2rem;
+    }
+
+    .money_provider_section .title {
+        width: 35%;
+    }
+
+    .money_provider_section .title h2 {
+        font-size: 1.5rem;
+    }
+
+    .money_provider_section .provider_img {
+        width: 60%;
+    }
+
+    .money_provider_section .provider_img-item {
+        max-width: 120px;
+    }
+
+    .footer_links {
+        width: 80%;
+    }
+
+    .core__module .item_title {
+        width: 46%;
+    }
+
+    .core__module .item_title .item_title,
+    .core__module .item_title .item_descr {
+        width: 90%;
+    }
+
+    .transfers__module .item_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        width: 45%;
+        padding: 10px;
+    }
+
+    .crypto_module .module_item .item_text .item_descr, 
+    .remittance-module .module_item .item_text .item_descr {
+        width: 100%;
+    }
+
+    .crypto_module .module_item .item_text .btn.uncolored, 
+    .remittance-module .module_item .item_text .btn.uncolored {
+        padding: 10px;
+    }
+    
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(1) {
+        width: 100%;
+    }
+
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(2) {
+        width: 80%;
+    }
+
+    .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(3) {
+        width: 70%;
+    }
+
+    .remittance-module .module_item .item_images img:first-child{
+        width: 80%;
+    }
+
+    .compliance-module .title {
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    .compliance-module .compliance_list {
+        gap: 15px;
+    }
+
+    .compliance-module .compliance_list li {
+        padding: 10px 20px;
+    }
+
+    .compliance_descr .compliance_item._active {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .compliance_descr .compliance_item .item_text {
+        width: 100%;
+    }
+
+    .compliance_descr .compliance_item .item_text .item_descr {
+        width: 100%;
+    }
+
+    .compliance_descr .compliance_item .item_images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .compliance_descr .compliance_item .item_images img:first-child {
+        left: 5%;
+    }
+
+    .integration_content .title {
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .integration_img img {
+        width: 50%;
+        top: 20%
+    }
+
+    .integrations .pattern-bot {
+        height: 120px;
+        left: -12%;
+    }
+
+    .blockchain_img img:nth-child(1),
+    .blockchain_img img:nth-child(2){
+        width: 70%;
+    }
+
+    .blockchain_list .wrapper {
+        padding-top: 0px;
+    }
+
+    .payments_n_baas .title {
+        font-size: 2rem;
+    }
+
+    .payments_n_baas ul .payment_item img {
+        height: 70px;
+        width: 80px;
+    }
+
+    .payments_n_baas ul .payment_item:last-child {
+        width: 100%;
+    }
+
+    .contact_main-banner .title {
+        font-size: 2.5rem;
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .banner_contacts li p,
+    .banner_contacts li a {
+        font-size: 0.775rem;
+    }
+
+    .banner_contacts li {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .mobile_menu .menu_list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .mobile_menu .sub_menu {
+        top: 0%;
+        left: 30%;
+        padding: 20px;
+        max-height: 400px;
+        width: 240px;
+        z-index: 10;
+    }
+    
+    .mobile_menu .sub_menu._active {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .how_to img,
+    .main_banner .main_banner-img,
+    .footer_links,
+    .blockchain_list .line {
+       display: none;
+    }
+
+    .main_banner .main_banner-descr {
+        width: 100%;
+    }
+
+    .calendly-inline-widget {
+        transform: translateY(0px);
+        height: 800px;
+    }
+
+    .appointment_descr .title,
+    .module_section .title {
+        font-size: 2rem;
+    }
+
+    .module_section .wrapper {
+        flex-direction: column;
+    }
+
+
+    .module_section .shape,
+    .money_provider_section .title,
+    .money_provider_section .provider_img,
+    .how_to-content ul,
+    .module_section .module_descr,
+    .core__module .item_title,
+    .transfers__module .item_title,
+    .crypto_module .module_item,
+    .crypto_module .module_item .item_text,
+    .crypto_module .module_item .item_images,
+    .remittance-module .module_item .item_text,
+    .remittance-module .module_item .item_images,
+    .blockchain_descr,
+    .blockchain_img,
+    .blockchain_list .list_item-content {
+        width: 100%;
+    }
+
+    .module_section .module_descr {
+        justify-content: flex-start;
+        min-height: 100%;
+    }
+
+    .how_to-content ul{
+        justify-content: center;
+    }
+
+    .grey_bottom {
+        border-radius: 50px 50px 0 0;
+        height: 20%;
+    }
+
+    .partners_section {
+        border-radius: 0 0 50px 50px;
+    }
+
+    .partners_section .container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .partners_section .wrapper {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .partner_item {
+        border-radius: 20px;
+        width: 40%;
+    }
+
+    .module_img {
+        width: 80%;
+        position: absolute;
+        left: 15%;
+        top: 66%;
+    }
+
+    .module_section .wrapper {
+        margin-bottom: 60px;
+    }
+
+    .money_provider_section .wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    footer .container{
+        padding: 20px 40px;
+    }
+
+    footer .wrapper {
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .mob_footer_links {
+        display: block;
+        width: 60%;
+    }
+
+    .mob_footer_links details{
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: var(--border-radius);
+        padding: 10px;
+        position: relative;
+        line-height: 142%;
+        color: var(--base-text-primary);
+        font-size: 1rem
+    }
+
+    .mob_footer_links summary{
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 142.69%;
+        outline: 0;
+        cursor: pointer;
+        display: block;
+        margin-right: -10px;
+        opacity: 0.8;
+    }
+
+    .mob_footer_links summary::after {
+        content: "\203A";
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        -webkit-transition: .2s;
+        transition: .2s;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        font-size: 1.5rem;
+        color: var(--base-text-primary);
+        
+    }
+
+    .mob_footer_links details[open] summary::after {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    .mob_footer_links details ul {
+        margin-top: 20px;
+    }
+
+    .mob_footer_links details ul a {
+        font-size: .875rem;
+    }
+
+    .crypto_module .module_item,
+    .crypto_module .module_item.reverse,
+    .crypto_module .module_item, 
+    .remittance-module .module_item,
+    .remittance-module .module_item.reverse{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .crypto_module .wrapper ul, 
+    .remittance-module ul {
+        gap: 20px;
+    }
+
+    .crypto_module .module_item .item_text .btn, 
+    .remittance-module .module_item .item_text .btn,
+    .crypto_module .module_item .item_text .btn.uncolored, 
+    .remittance-module .module_item .item_text .btn.uncolored{
+        padding: 10px;
+    }
+
+    .crypto_module .module_item .item_text .item_descr, 
+    .remittance-module .module_item .item_text .item_descr {
+        margin-bottom: 30px;
+    }
+
+    .compliance-module .compliance_list li {
+        padding: 10px 10px;
+        font-size: .875rem;
+    }
+
+    .compliance_descr .compliance_item .item_images img:first-child {
+        width: 100%;
+    }
+
+    .compliance_descr .compliance_item:nth-child(5) .item_images img:first-child,
+    .compliance_descr .compliance_item:nth-child(6) .item_images img:first-child,
+    .compliance_descr .compliance_item:nth-child(7) .item_images img:first-child {
+        width: 80%;
+    }
+
+    .integrations .wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .integration_content {
+        width: 100%;
+    }
+
+    .integration_content .item_descr {
+        width: 100%;
+    }
+
+    .integrations .pattern-top {
+        position: absolute;
+        top: 0;
+        left: -10%;
+    }
+
+    .integration_content .title {
+        width: 80%;
+    }
+
+    .integrations .pattern-bot {
+        height: 120px;
+        left: 70%;
+    }
+
+    .integration_img {
+        width: 100%;
+        height: 0px;
+    }
+
+    .integration_img img {
+        width: 20%;
+    }
+
+    .integrations_mob .wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .integrations_mob .open_sanctions, .integrations_mob .zign_sec {
+        background-color: #f6f6f6;
+        width: 100%;
+    }
+
+    .blockchain .container{
+        padding-bottom: 80px;
+    }
+
+.blockchain .wrapper {
+    flex-direction: column-reverse;
+    gap: 40px;
+}
+
+    .blockchain_descr .title {
+        font-size: 2rem;
+    }
+
+    .empty_item{
+        display: none;
+    }
+
+    .payments_n_baas ul .payment_item {
+        width: 100%;
+    }
+
+    .payments_n_baas ul .payment_item:nth-child(2){
+        gap: 35px;
+    }
+
+    .banner_contacts {
+        display: none;
+    }
+
+    .contact_main-banner .title{
+        width: 100%;
+    }
+
+    .input_wrapper{
+        flex-wrap: wrap;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
 }
