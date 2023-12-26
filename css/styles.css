@@ -119,9 +119,6 @@ header .menu_list li a {
     text-decoration: none;
 }
 
-.sub_menu-btn.arrow {
-    transform: translateY(2px);
-}
 
 .burger__menu {
     display: none;
@@ -1526,6 +1523,9 @@ footer ul li.title {
         width: 60%;
     }
 
+    .how_to img {
+        transform: translateY(-5px) translateX(-80px);
+    }
 
     .crypto_module .module_item.crypto_acc .item_images img:nth-child(1) {
         position: absolute;
@@ -1677,6 +1677,10 @@ footer ul li.title {
 
     .main_banner .main_banner-img img {
         width: 90%;
+    }
+
+    .how_to img {
+        transform: translateY(22px) translateX(-80px);
     }
 
     .appointment_section .container {
@@ -2158,7 +2162,7 @@ footer ul li.title {
 
     .how_to img {
         width: 40%;
-        transform: translateY(35px) translateX(-80px);
+        transform: translateY(32px) translateX(-80px);
         z-index: 5;
     }
 
