@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
 }
 
-.mob{
+.mob {
     display: none;
 }
 
@@ -44,7 +44,7 @@ ul li {
     padding: 40px 200px;
 }
 
-.mobile_menu{
+.mobile_menu {
     display: none;
 }
 
@@ -119,11 +119,11 @@ header .menu_list li a {
     text-decoration: none;
 }
 
-.sub_menu-btn.arrow{
+.sub_menu-btn.arrow {
     transform: translateY(2px);
 }
 
-.burger__menu{
+.burger__menu {
     display: none;
 }
 
@@ -332,8 +332,7 @@ header .sub_menu li span {
 }
 
 .appointment_section .container {
-    padding-right: 0px;
-    padding-top: 0px;
+
     padding-bottom: 30px;
 }
 
@@ -371,16 +370,20 @@ header .sub_menu li span {
     background-color: var(--base-elements);
 }
 
-
-.calendly-inline-widget {
+.calendly{
     width: 100%;
-    height: 660px;
-    overflow-y: hidden;
+    height: 720px;
 }
 
-.calendly-inline-widget iframe {
+iframe {
     width: 100%;
-    overflow: hidden;
+    height: 100%;
+    overflow: hidden !important;
+}
+
+._cUP1np9gMvFQrcPftuf.xahN8AEzyAvQtVj17TPv {
+    margin-top: 0px !important;
+    margin-bottom: 30px;
 }
 
 .partners_section {
@@ -721,7 +724,7 @@ header .sub_menu li span {
 
 
 .remittance-module,
-.crypto_module{
+.crypto_module {
     box-sizing: border-box;
     width: 100%;
     overflow: hidden;
@@ -884,6 +887,7 @@ header .sub_menu li span {
     right: 40%;
     z-index: 3;
 }
+
 
 
 .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(1) {
@@ -1066,7 +1070,7 @@ header .sub_menu li span {
     color: var(--base-text-placeholder)
 }
 
-.banner_contacts li a{
+.banner_contacts li a {
     color: var(--base-elements);
 }
 
@@ -1074,7 +1078,7 @@ header .sub_menu li span {
     position: relative;
 }
 
-.contact_main-banner .main_banner-descr img{
+.contact_main-banner .main_banner-descr img {
     width: 100%;
 }
 
@@ -1180,6 +1184,9 @@ form .btn {
     box-sizing: border-box;
 }
 
+.integrations.main .container{
+    padding-bottom: 120px;
+}
 
 .integrations .breadscrump {
     width: 300px;
@@ -1283,7 +1290,7 @@ form .btn {
     width: 80%;
 }
 
-.integrations_mob{
+.integrations_mob {
     display: none;
 }
 
@@ -1302,6 +1309,18 @@ form .btn {
     background-color: var(--base-elements);
     color: var(--base-text-primary);
     border-color: var(--base-text-primary);
+}
+
+.blockchain.main .wrapper{
+    margin-bottom: 120px;
+}
+
+/* .blockchain.main .btn{
+    padding: 20px 80px;
+} */
+
+.blockchain.main .blockchain_descr {
+    gap: 50px;
 }
 
 .blockchain .wrapper {
@@ -1448,7 +1467,7 @@ footer .wrapper {
     justify-content: space-between;
 }
 
-.mob_footer_links{
+.mob_footer_links {
     display: none;
 }
 
@@ -1474,6 +1493,12 @@ footer ul li.title {
     opacity: 1;
 }
 
+@media(min-width: 2000px) {
+    .container {
+        padding: 40px 300px;
+    }
+}
+
 @media(max-width: 1600px) {
     .container {
         padding: 40px 100px;
@@ -1483,7 +1508,7 @@ footer ul li.title {
         right: 10%;
         top: 0%;
     }
-    
+
     .main_banner .elipse.left {
         top: -30%;
         left: 0%;
@@ -1625,6 +1650,10 @@ footer ul li.title {
     .integrations .zign_sec .partner_wrapper .partner_descr {
         width: 100%;
     }
+
+    .integrations.main .container{
+        padding-bottom: 80px;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -1636,7 +1665,7 @@ footer ul li.title {
         right: 10%;
         top: 10%;
     }
-    
+
     .main_banner .elipse.left {
         top: -10%;
         left: 0%;
@@ -1706,7 +1735,7 @@ footer ul li.title {
     }
 
     .crypto_module .module_item img.shape,
-    .remittance-module .module_item img.shape{
+    .remittance-module .module_item img.shape {
         width: 100%;
     }
 
@@ -1746,7 +1775,7 @@ footer ul li.title {
         z-index: 1;
         width: 80%;
     }
-    
+
     .crypto_module .module_item.crypto_exch .item_images img:nth-child(2) {
         position: absolute;
         top: 0%;
@@ -1754,7 +1783,7 @@ footer ul li.title {
         z-index: 3;
         width: 60%;
     }
-    
+
     .crypto_module .module_item.crypto_exch .item_images img:nth-child(3) {
         position: absolute;
         bottom: -10%;
@@ -1827,7 +1856,7 @@ footer ul li.title {
         transform: translateX(0px);
     }
 
-    .remittance-module .module_item .item_images img:nth-child(1){
+    .remittance-module .module_item .item_images img:nth-child(1) {
         width: 350px;
     }
 
@@ -1836,28 +1865,29 @@ footer ul li.title {
         width: 80%;
     }
 
-    .integrations{
+    .integrations {
         margin-bottom: 0;
     }
 
-    .integrations .pattern-bot{
+    .integrations .pattern-bot {
         left: -15%;
     }
 
-    .integrations .pattern-top{
+    .integrations .pattern-top {
         height: 150px;
     }
+
     .integration_content .title {
         font-size: 2.5rem;
     }
 
     .integration_content .item_descr {
         width: 80%;
-        margin-bottom:50px;
+        margin-bottom: 50px;
     }
 
     .integrations .open_sanctions,
-    .integrations .zign_sec{
+    .integrations .zign_sec {
         display: none;
     }
 
@@ -1865,13 +1895,13 @@ footer ul li.title {
         display: block;
     }
 
-    .integrations_mob .wrapper{
+    .integrations_mob .wrapper {
         display: flex;
         justify-content: space-between;
     }
 
     .integrations_mob .open_sanctions,
-    .integrations_mob .zign_sec{
+    .integrations_mob .zign_sec {
         background-color: #E3E3E1;
         padding: 30px 20px;
         border-radius: 25px;
@@ -1885,11 +1915,15 @@ footer ul li.title {
         gap: 20px;
     }
 
-    .integratintegrations_mobions .open_sanctions  img {
+    .integrations_mob .zign_sec {
+        background-color: var(--base-text-primary);
+    }
+
+    .integratintegrations_mobions .open_sanctions img {
         width: 300px;
     }
-    
-    .integrations_mob .zign_sec  img {
+
+    .integrations_mob .zign_sec img {
         width: 170px;
     }
 
@@ -1897,7 +1931,8 @@ footer ul li.title {
         right: 12%;
     }
 
-    .blockchain_img, .blockchain_descr {
+    .blockchain_img,
+    .blockchain_descr {
         width: 80%;
     }
 
@@ -1916,25 +1951,30 @@ footer ul li.title {
     .payments_n_baas ul .payment_item {
         gap: 25px;
     }
+
+    .integrations.main .container{
+        padding-bottom: 40px;
+    }
 }
 
-@media(max-width: 900px){
+@media(max-width: 900px) {
     .container {
         padding: 40px;
     }
-    .mob{
+
+    .mob {
         display: block;
     }
 
-    .pc{
+    .pc {
         display: none;
     }
 
     header .menu_list {
-       display: none;
+        display: none;
     }
 
-    .mobile_menu{
+    .mobile_menu {
         display: block;
         position: fixed;
         top: -100%;
@@ -1947,7 +1987,7 @@ footer ul li.title {
         transition: all 0.5s ease 0s;
     }
 
-    .mobile_menu._active{
+    .mobile_menu._active {
         top: 7%;
     }
 
@@ -1956,7 +1996,7 @@ footer ul li.title {
         justify-content: space-around;
         gap: 20px;
     }
-    
+
     .mobile_menu .menu_list li {
         list-style-type: none;
         color: var(--base-text-secondary);
@@ -1964,10 +2004,10 @@ footer ul li.title {
         display: flex;
         align-items: center;
         cursor: pointer;
-        position: relative;       
+        position: relative;
         font-weight: 600;
     }
-    
+
     .mobile_menu .menu_list li::after {
         content: "";
         display: block;
@@ -1979,16 +2019,16 @@ footer ul li.title {
         left: 0;
         transition: width 0.3s;
     }
-    
+
     .mobile_menu .menu_list li:hover:after {
         width: 100%;
     }
-    
+
     .mobile_menu .menu_list li img {
         width: 15px;
         transform: translateY(1px);
     }
-    
+
     .mobile_menu .menu_list li a {
         color: var(--base-text-secondary);
         font-size: 1rem;
@@ -2010,14 +2050,14 @@ footer ul li.title {
         display: none;
         transition: height 0.9s ease;
     }
-    
+
     .mobile_menu .sub_menu._active {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         flex-wrap: wrap;
     }
-    
+
     .mobile_menu .sub_menu li a {
         color: var(--base-text-secondary);
         font-size: 1rem;
@@ -2025,7 +2065,7 @@ footer ul li.title {
         align-items: center;
         gap: 5px;
     }
-    
+
     .mobile_menu .sub_menu li span {
         background-color: #f6f7f8;
         width: 2rem;
@@ -2044,7 +2084,7 @@ footer ul li.title {
         cursor: pointer;
         margin-left: 10px;
     }
-    
+
     .burger__menu span,
     .burger__menu::before,
     .burger__menu::after {
@@ -2055,35 +2095,35 @@ footer ul li.title {
         background-color: var(--base-text-primary);
         border-radius: 100px;
     }
-    
-    
+
+
     .burger__menu::before,
     .burger__menu::after {
         content: "";
     }
-    
+
     .burger__menu::before {
         top: 0;
     }
-    
+
     .burger__menu::after {
         bottom: 0;
     }
-    
+
     .burger__menu span {
         top: 50%;
         transform: scale(1) translate(0px, -50%);
     }
-    
+
     .burger__menu._active span {
         transform: scale(0) translate(0px, -50%);
     }
-    
+
     .burger__menu._active::before {
         top: 50%;
         transform: rotate(45deg) translate(0px, -50%);
     }
-    
+
     .burger__menu._active::after {
         bottom: 50%;
         transform: rotate(-45deg) translate(0px, 50%);
@@ -2093,7 +2133,7 @@ footer ul li.title {
         right: 10%;
         top: 20%;
     }
-    
+
     .main_banner .elipse.left {
         top: 0%;
         left: 0%;
@@ -2135,7 +2175,7 @@ footer ul li.title {
         padding: 30px;
     }
 
-    .module_section .wrapper{
+    .module_section .wrapper {
         margin-bottom: 20px;
     }
 
@@ -2189,16 +2229,16 @@ footer ul li.title {
         padding: 10px;
     }
 
-    .crypto_module .module_item .item_text .item_descr, 
+    .crypto_module .module_item .item_text .item_descr,
     .remittance-module .module_item .item_text .item_descr {
         width: 100%;
     }
 
-    .crypto_module .module_item .item_text .btn.uncolored, 
+    .crypto_module .module_item .item_text .btn.uncolored,
     .remittance-module .module_item .item_text .btn.uncolored {
         padding: 10px;
     }
-    
+
     .crypto_module .module_item.crypto_scrochain .item_images img:nth-child(1) {
         width: 100%;
     }
@@ -2211,7 +2251,7 @@ footer ul li.title {
         width: 70%;
     }
 
-    .remittance-module .module_item .item_images img:first-child{
+    .remittance-module .module_item .item_images img:first-child {
         width: 80%;
     }
 
@@ -2270,13 +2310,18 @@ footer ul li.title {
     }
 
     .blockchain_img img:nth-child(1),
-    .blockchain_img img:nth-child(2){
+    .blockchain_img img:nth-child(2) {
         width: 70%;
     }
 
     .blockchain_list .wrapper {
         padding-top: 0px;
     }
+
+    .blockchain.main .wrapper{
+        margin-bottom: 0px;
+    }
+    
 
     .payments_n_baas .title {
         font-size: 2rem;
@@ -2327,7 +2372,7 @@ footer ul li.title {
         width: 240px;
         z-index: 10;
     }
-    
+
     .mobile_menu .sub_menu._active {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -2337,7 +2382,7 @@ footer ul li.title {
     .main_banner .main_banner-img,
     .footer_links,
     .blockchain_list .line {
-       display: none;
+        display: none;
     }
 
     .main_banner .main_banner-descr {
@@ -2377,12 +2422,22 @@ footer ul li.title {
         width: 100%;
     }
 
+    .main_banner .elipse.right {
+        right: 0%;
+        top: 50%;
+    }
+
+    .main_banner .elipse.left {
+        top: 0%;
+        left: 0%;
+    }
+
     .module_section .module_descr {
         justify-content: flex-start;
         min-height: 100%;
     }
 
-    .how_to-content ul{
+    .how_to-content ul {
         justify-content: center;
     }
 
@@ -2426,7 +2481,7 @@ footer ul li.title {
         gap: 40px;
     }
 
-    footer .container{
+    footer .container {
         padding: 20px 40px;
     }
 
@@ -2440,7 +2495,7 @@ footer ul li.title {
         width: 60%;
     }
 
-    .mob_footer_links details{
+    .mob_footer_links details {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         border-radius: var(--border-radius);
@@ -2451,7 +2506,7 @@ footer ul li.title {
         font-size: 1rem
     }
 
-    .mob_footer_links summary{
+    .mob_footer_links summary {
         font-weight: 400;
         font-size: 1rem;
         line-height: 142.69%;
@@ -2473,7 +2528,7 @@ footer ul li.title {
         transform: rotate(0deg);
         font-size: 1.5rem;
         color: var(--base-text-primary);
-        
+
     }
 
     .mob_footer_links details[open] summary::after {
@@ -2491,26 +2546,26 @@ footer ul li.title {
 
     .crypto_module .module_item,
     .crypto_module .module_item.reverse,
-    .crypto_module .module_item, 
+    .crypto_module .module_item,
     .remittance-module .module_item,
-    .remittance-module .module_item.reverse{
+    .remittance-module .module_item.reverse {
         flex-direction: column;
         gap: 40px;
     }
 
-    .crypto_module .wrapper ul, 
+    .crypto_module .wrapper ul,
     .remittance-module ul {
         gap: 20px;
     }
 
-    .crypto_module .module_item .item_text .btn, 
+    .crypto_module .module_item .item_text .btn,
     .remittance-module .module_item .item_text .btn,
-    .crypto_module .module_item .item_text .btn.uncolored, 
-    .remittance-module .module_item .item_text .btn.uncolored{
+    .crypto_module .module_item .item_text .btn.uncolored,
+    .remittance-module .module_item .item_text .btn.uncolored {
         padding: 10px;
     }
 
-    .crypto_module .module_item .item_text .item_descr, 
+    .crypto_module .module_item .item_text .item_descr,
     .remittance-module .module_item .item_text .item_descr {
         margin-bottom: 30px;
     }
@@ -2571,25 +2626,34 @@ footer ul li.title {
         gap: 30px;
     }
 
-    .integrations_mob .open_sanctions, .integrations_mob .zign_sec {
+    .integrations_mob .open_sanctions,
+    .integrations_mob .zign_sec {
         background-color: #f6f6f6;
         width: 100%;
     }
 
-    .blockchain .container{
+    .integrations_mob .zign_sec {
+        background-color: var(--base-text-primary);
+    }
+
+    .blockchain .container {
         padding-bottom: 80px;
     }
 
-.blockchain .wrapper {
-    flex-direction: column-reverse;
-    gap: 40px;
-}
+    .blockchain .wrapper {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .blockchain.main .wrapper{
+        margin-bottom: 40px;
+    }
 
     .blockchain_descr .title {
         font-size: 2rem;
     }
 
-    .empty_item{
+    .empty_item {
         display: none;
     }
 
@@ -2597,7 +2661,7 @@ footer ul li.title {
         width: 100%;
     }
 
-    .payments_n_baas ul .payment_item:nth-child(2){
+    .payments_n_baas ul .payment_item:nth-child(2) {
         gap: 35px;
     }
 
@@ -2605,11 +2669,11 @@ footer ul li.title {
         display: none;
     }
 
-    .contact_main-banner .title{
+    .contact_main-banner .title {
         width: 100%;
     }
 
-    .input_wrapper{
+    .input_wrapper {
         flex-wrap: wrap;
     }
 
@@ -2617,4 +2681,81 @@ footer ul li.title {
         width: 100%;
     }
 
+}
+
+@media(max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+
+    .contact_main-banner {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .main_banner .main_banner-descr .title,
+    .contact_main-banner .title {
+        font-size: 2.275rem;
+    }
+
+    .main_banner .main_banner-descr ul li {
+        font-size: 1rem;
+    }
+
+    .how_to-content .title,
+    .appointment_descr .title,
+    .module_section .title {
+        font-size: 1.875rem;
+    }
+
+    .money_provider_section .title h2 {
+        font-size: 1.275rem;
+    }
+
+    .how_to-content ul li {
+        width: 40%;
+    }
+
+    .mob_footer_links summary::after {
+        right: 0px;
+    }
+
+    .crypto_module .module_item.crypto_aml .item_images img:nth-child(1) {
+        left: -25%;
+    }
+
+    .compliance_descr .compliance_item .item_text .btn.uncolored {
+        margin-right: 10px;
+    }
+
+    .compliance_descr .compliance_item .item_text .btn {
+
+        padding: 10px;
+    }
+
+    .integrations {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+    .contact_main-banner .descr_adress {
+        left: 52%;
+        top: 30%;
+        width: 170px;
+    }
+
+    .blockchain.main .wrapper{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 374px) {
+    .contact_main-banner .descr_adress {
+        left: 52%;
+        top: 40%;
+        width: 170px;
+    }
 }

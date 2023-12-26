@@ -4,14 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BaSS - Payments and Transfers Module</title>
     <meta name="description"
-        content="Whether you are launching your own Neobank, e-wallet or you would like to seamlessly embed FinTech solutions to your product, Crassula White Label Banking will get you covered.">
+        content="Contact us for inquiries, support, or any questions. Fill out the form and our team will get back to you.">
+    <meta name="keywords"
+        content="SaaS Finance, Business SaaS, Financial Software, Digital Finance, Enterprise Management, Cloud Solutions, Efficient Management, Accounting SaaS, Financial Technologies, Innovation in Finance, Cloud Applications, Economic Planning, Budget Forecasting, Cloud Analytics, Expense Management, Integrated Solutions, Financial Optimization, Innovative Solutions, Electronic Reporting, Data Analysis.">
+    <meta name="author" content="Baas">
+
+    <meta property="og:title" content="Contact Us">
+    <meta property="og:description"
+        content="Contact us for inquiries, support, or any questions. Fill out the form and our team will get back to you.">
+    <meta property="og:url" content="url_to_your_contact_page">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us">
+    <meta name="twitter:description"
+        content="Contact us for inquiries, support, or any questions. Fill out the form and our team will get back to you.">
+    <meta name="twitter:url" content="url_to_your_contact_page">
+
+    <title>Contact Us - Get in Touch with BaaS</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand:wght@300;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/calendly.css">
 </head>
 
 <body>
@@ -72,7 +91,9 @@
                 </ul>
 
 
-                <a href="contacts.html" class="btn">Submit a Request</a>
+                <a href="" class="btn"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/mrbelongtim/30min?hide_event_type_details=1&hide_gdpr_banner=1'});return false;">make
+                    an appointment</a>
                 <div class="burger__menu">
                     <span></span>
                 </div>
@@ -85,7 +106,7 @@
             <div class="wrapper">
                 <div class="main_banner-descr">
                     <h1 class="title">Contact our team to find out more</h1>
-                    <img src="img/Map.png" alt="">
+                    <img src="img/Map.png" alt="world map">
                     <div class="descr_adress">
                         <h5 class="descr_title">Czech Republic</h5>
                         <p>Smith Street 18, Praha 4 - Nusle 140 00</p>
@@ -297,6 +318,7 @@
     </div>
     <script src="js/script.js"></script>
     <script src="js/form-send.js"></script>
+    <script src="js/widget.js" type="text/javascript" async></script>
     <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
 
 </body>
