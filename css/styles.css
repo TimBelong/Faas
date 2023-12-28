@@ -34,6 +34,7 @@ body {
 
 a {
     text-decoration: none;
+    cursor: pointer !important;
 }
 
 ul li {
@@ -89,6 +90,10 @@ header .menu_list li {
     gap: 5px;
     cursor: pointer;
     position: relative;
+}
+
+header .menu_list li:last-child{
+    margin-left: 10px;
 }
 
 header .menu_list li::after {
@@ -292,7 +297,7 @@ header .sub_menu li span {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
     width: 45%;
@@ -579,7 +584,7 @@ summary {
 .money_provider_section .title {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 40%;
 }
 
 .money_provider_section .title h2 {
@@ -988,6 +993,13 @@ summary {
     margin-right: 20px;
 }
 
+.crypto_module .module_item .item_text .btn.uncolored:hover, 
+.remittance-module .module_item .item_text .btn.uncolored:hover 
+{
+    color: var(--base-text-primary);
+    background-color: var(--primary-solid);
+}
+
 .compliance_descr .compliance_item .item_images {
     position: relative;
 }
@@ -1282,9 +1294,6 @@ form .btn {
     border-color: var(--base-text-primary);
 }
 
-.blockchain.main .wrapper{
-    margin-bottom: 120px;
-}
 
 /* .blockchain.main .btn{
     padding: 20px 80px;
@@ -1301,7 +1310,7 @@ form .btn {
 
 .blockchain_img,
 .blockchain_descr {
-    width: 50%;
+    width: 45%;
 }
 
 .blockchain_descr p {
@@ -1312,11 +1321,15 @@ form .btn {
     position: relative;
 }
 
+.blockchain_img img{
+    width: 100%;
+}
+
 
 .blockchain_img img:nth-child(2) {
     position: absolute;
-    right: 32%;
-    top: 30%;
+    right: 0%;
+    top: 0%;
     z-index: 2;
 }
 
@@ -1338,7 +1351,7 @@ form .btn {
 
 .blockchain_list .line {
     position: absolute;
-    top: 15%;
+    top:8%;
     left: 50%;
     height: 580px;
 }
@@ -1346,8 +1359,7 @@ form .btn {
 .blockchain_list .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    padding-top: 80px;
+    gap: 80px;
 }
 
 .blockchain_list .list_item {
@@ -1447,13 +1459,18 @@ footer .wrapper {
 }
 
 .footer_links {
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.mob_footer_links {
-    display: none;
+
+footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 footer ul li {
@@ -1472,10 +1489,12 @@ footer ul li a {
     opacity: 0.8;
 }
 
-footer ul li.title {
-    font-weight: 600;
-    margin-bottom: 20px;
-    opacity: 1;
+
+footer .copyright p{
+    text-align: center;
+    color: var(--base-text-primary);
+    opacity: .7;
+    font-size: .875rem;
 }
 
 @media(min-width: 2000px) {
@@ -1505,10 +1524,6 @@ footer ul li.title {
 
     .money_provider_section .title h2 {
         font-size: 2.5rem;
-    }
-
-    .footer_links {
-        width: 60%;
     }
 
 
@@ -2023,10 +2038,6 @@ footer ul li.title {
         max-width: 120px;
     }
 
-    .footer_links {
-        width: 80%;
-    }
-
     .core__module .item_title {
         width: 46%;
     }
@@ -2443,17 +2454,9 @@ footer ul li.title {
         background-color: var(--base-text-primary);
     }
 
-    .blockchain .container {
-        padding-bottom: 80px;
-    }
-
     .blockchain .wrapper {
         flex-direction: column-reverse;
         gap: 40px;
-    }
-
-    .blockchain.main .wrapper{
-        margin-bottom: 40px;
     }
 
     .blockchain_descr .title {
@@ -2551,9 +2554,6 @@ footer ul li.title {
         width: 170px;
     }
 
-    .blockchain.main .wrapper{
-        margin-bottom: 20px;
-    }
 }
 
 @media(max-width: 374px) {
