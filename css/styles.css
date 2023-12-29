@@ -1452,8 +1452,10 @@ footer {
 
 footer .wrapper {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
     border-bottom: 1px solid var(--base-text-primary);
     padding: 40px 0;
 }
@@ -1461,16 +1463,17 @@ footer .wrapper {
 .footer_links {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
 
 footer ul {
-    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
 }
 
 footer ul li {
@@ -1478,6 +1481,10 @@ footer ul li {
     color: var(--base-text-primary);
     opacity: 0.8;
     margin-bottom: 8px;
+}
+
+footer ul li.title{
+    opacity: 1;
 }
 
 footer ul li a:hover {
@@ -2168,6 +2175,10 @@ footer .copyright p{
         gap: 10px;
         width: 100%;
     }
+
+    .footer_links{
+        justify-content: flex-start;
+    }
 }
 
 @media(max-width: 600px) {
@@ -2194,7 +2205,6 @@ footer .copyright p{
     }
 
     .main_banner .main_banner-img,
-    .footer_links,
     .blockchain_list .line {
         display: none;
     }
@@ -2490,7 +2500,6 @@ footer .copyright p{
     .form-group {
         width: 100%;
     }
-
 }
 
 @media(max-width: 400px) {
